@@ -1,3 +1,7 @@
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+</script>
+
 <template>
-  <h1>DuitTrack</h1>
+  <RouterView />
 </template>
