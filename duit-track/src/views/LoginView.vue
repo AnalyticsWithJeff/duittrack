@@ -26,12 +26,12 @@
                 <p class="mt-4 text-gray-600 font-normal">Please sign-in to your account and start the adventure</p>
 
                 <form action="" class="flex flex-col gap-4">
-                    <input class="p-2 mt-8 border border-gray-400 rounded-lg" 
+                    <input class="p-3 mt-8 border border-gray-400 rounded-lg" 
                     type="text"
                     name="email"
                     placeholder="Email">
                     <div class="relative">
-                        <input class="p-2 border border-gray-400 rounded-lg w-full"
+                        <input class="p-3 border border-gray-400 rounded-lg w-full"
                         type="password"
                         name="password"
                         placeholder="Password">
