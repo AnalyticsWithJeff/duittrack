@@ -1,6 +1,7 @@
 <script setup>
+
 </script>
 
 <template>
-  <h1>DuitTrack</h1>
+  <a href="/login">Login</a>
 </template>
