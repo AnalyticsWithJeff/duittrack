@@ -52,7 +52,7 @@
                 <div class="mt-4 flex justify-center">
                     <p class="text-gray-600 font-normal">
                         Already have an account?
-                        <a class="text-indigo-600" href="/">Sign in instead</a>
+                        <a class="text-indigo-600" href="/login">Sign in instead</a>
                     </p>
                 </div>
                 <!-- Divider -->
