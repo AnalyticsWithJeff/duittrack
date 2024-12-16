@@ -18,7 +18,7 @@
             </div>
 
             <!-- Form Section -->
-            <div class="w-full laptop:w-1/3 h-screen bg-gray-100 flex flex-col justify-center items-center relative z-10">
+            <div class="w-full laptop:w-1/3 my-24 laptop:my-4 bg-gray-100 flex flex-col justify-center items-center relative z-10">
                 <div class="px-8 max-w-md">
                     <h2 class="font-semibold text-2xl">Welcome to DuitTrack!</h2>
                     <p class="mt-4 text-gray-600 font-normal">
