@@ -17,7 +17,7 @@
             </div>
 
             <!-- Form Section -->
-            <div class="w-full laptop:w-1/3 h-screen bg-gray-100 flex flex-col justify-center items-center relative z-10">
+            <div class="w-full laptop:w-1/3 my-24 laptop:my-4 bg-gray-100 flex flex-col justify-center items-center relative z-10">
                 <div class="px-8 max-w-md">
                     <h2 class="font-semibold text-2xl">Welcome to DuitTrack!</h2>
                     <p class="mt-4 text-gray-600 font-normal">
@@ -82,11 +82,11 @@
 
         <!-- Logo Section -->
         <div class="absolute top-8 left-0 w-2/3 z-20">
-    <div class="flex items-center space-x-2 ml-12">
-        <img class="h-8 w-auto" :src="logo" alt="DuitTrack Logo" />
-        <h2 class="inline-block font-bold text-2xl text-gray-800">DuitTrack</h2>
-    </div>
-</div>
+            <div class="flex items-center space-x-2 ml-12">
+                <img class="h-8 w-auto" :src="logo" alt="DuitTrack Logo" />
+                <h2 class="inline-block font-bold text-2xl text-gray-800">DuitTrack</h2>
+            </div>
+        </div>
 
     </section>
 </template>
