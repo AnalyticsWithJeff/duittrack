@@ -1,11 +1,13 @@
-import express, { Express } from "express";
+import express, { Express, Request, Response } from "express";
 import { Server } from "http";
-import userRouter from "./routes/authRoutes";
+import userRouter from "@routes/authRoutes";
 import { errorConverter, errorHandler } from "./middleware";
 import { connectDB } from "./database";
-import config from "./config/config";
+import config from "@config/config";
+
 
 const app: Express = express();
+
 let server: Server;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
