@@ -1,6 +1,28 @@
 <script setup>
+    import { ref, onMounted } from 'vue'
+    import { RouterLink } from 'vue-router'
     import logo from '@/assets/logo.svg'
-    import login from'@/assets/login.png'
+    import loginbackground from'@/assets/loginbackground.png'
+    import axious from 'axios'
+    import router from '@/router'
+
+    const email = ref('');
+    const password = ref('');
+    const message = ref('');
+
+    const login = async () => {
+        axious.post('http://localhost:8081/login', {
+            email: email.value,
+            password: password.value
+        }).then((response) => {
+            const token = response.data.token;
+            localStorage.setItem('token', token);
+            router.push({ path: 'dashboard', replace: true });
+        }).catch((error) => {
+            console.error("Login failed", error);
+            message.value = err.response?.data?.message || 'Login failed';
+        });
+    }
 </script>
 
 <template>
@@ -11,7 +33,7 @@
             <div class="w-2/3 hidden laptop:flex items-center justify-center relative z-0">
                 <img 
                     class="h-[70vh] w-auto object-cover" 
-                    :src="login" 
+                    :src="loginbackground" 
                     alt="Login Background" 
                 />
             </div>
@@ -23,16 +45,18 @@
                     <p class="mt-4 text-gray-600 font-normal">
                         Please sign-in to your account and start the adventure
                     </p>
-
-                    <form action="" class="flex flex-col gap-4">
+                    <p v-if="message">{{ message }}</p>
+                    <form @submit.prevent="login" class="flex flex-col gap-4">
                         <input class="p-3 mt-8 border border-gray-400 rounded-lg" 
                         type="text"
                         name="email"
+                        v-model="email"
                         placeholder="Email">
                         <div class="relative">
                             <input class="p-3 border border-gray-400 rounded-lg w-full"
                             type="password"
                             name="password"
+                            v-model="password"
                             placeholder="Password">
                             <svg 
                             xmlns="http://www.w3.org/2000/svg" 
@@ -45,7 +69,7 @@
                         </div>
                         <div class="my-4 flex justify-between items-center mx-2">
                             <div class="flex items-center">
-                                <input id="remember-me" type="checkbox" v-model="rememberMe" 
+                                <input id="remember-me" type="checkbox"
                                 class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-4 border-gray-300 rounded-2xl">
                                 <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
                             </div>

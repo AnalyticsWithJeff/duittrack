@@ -4,9 +4,21 @@ import userRouter from "@routes/authRoutes";
 import { errorConverter, errorHandler } from "./middleware";
 import { connectDB } from "./database";
 import config from "@config/config";
-
+import cors from 'cors';
 
 const app: Express = express();
+const corsOptions = {
+    origin: 'http://localhost:5173', // Allow only requests from this origin
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed HTTP methods
+    credentials: true, // Allow credentials (cookies, authorization headers)
+  };
+app.use(cors(corsOptions));
+app.get('/register', (req: Request, res: Response) => {
+    res.send('CORS-enabled Express app!');
+});
+app.get('/login', (req: Request, res: Response) => {
+    res.send('CORS-enabled Express app!');
+});
 
 let server: Server;
 app.use(express.json());
