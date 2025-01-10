@@ -16,7 +16,7 @@
             password: password.value
         }).then((response) => {
             const token = response.data.token;
-            localStorage.setItem('token', token);
+            sessionStorage.setItem('token', token);
             router.push({ path: 'dashboard', replace: true });
         }).catch((error) => {
             console.error("Login failed", error);
