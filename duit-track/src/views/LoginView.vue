@@ -61,20 +61,35 @@
                         Please sign-in to your account and start the adventure
                     </p>
                     <p v-if="message">{{ message }}</p>
-                    <form @submit.prevent="login" class="flex flex-col gap-4">
-                        <input class="p-3 mt-8 border border-gray-400 rounded-lg" 
-                        type="text"
-                        name="email"
-                        v-model="email"
-                        placeholder="Email">
-                        <div class="relative">
-                            <input class="p-3 border border-gray-400 rounded-lg w-full"
-                            id="show-password"
-                            type="password"
-                            name="password"
-                            v-model="password"
-                            placeholder="Password">
-                            <button @click="showPassword" class="absolute top-1/2 right-3 -translate-y-1/2">
+                    <form @submit.prevent="login" class="flex flex-col">
+                        <label class="relative">
+                            <input class="p-3 mt-8 border border-gray-400 rounded-lg hover:border-gray-600 peer focus:ring-0 focus:outline-none 
+                                focus:border-violet-600 w-full placeholder-transparent"
+                                type="text"
+                                name="email"
+                                placeholder="E-mail"
+                                v-model="email">
+                            <span class="absolute left-3 top-5 px-2 bg-white text-sm peer-focus:translate-y-0 peer-focus:text-sm peer-focus:bg-white duration-200 
+                                peer-focus:text-indigo-600 peer-placeholder-shown:translate-y-6 peer-placeholder-shown:bg-none peer-placeholder-shown:text-base
+                                peer-placeholder-shown:text-gray-400 transition-all">
+                                E-mail
+                            </span>
+                        </label>
+                        
+                        <label class="relative">
+                            <input class="p-3 mt-5 border border-gray-400 rounded-lg w-full peer hover:border-gray-600 peer focus:ring-0 focus:outline-none 
+                                focus:border-violet-600 placeholder-transparent"
+                                id="show-password"
+                                type="password"
+                                name="password"
+                                v-model="password"
+                                placeholder="Password">
+                            <span class="absolute left-3 top-2 px-2 bg-white text-sm peer-focus:translate-y-0 peer-focus:text-sm peer-focus:bg-white duration-200 
+                                peer-focus:text-indigo-600 peer-placeholder-shown:translate-y-6 peer-placeholder-shown:bg-none peer-placeholder-shown:text-base
+                                peer-placeholder-shown:text-gray-400 transition-all">
+                                Password
+                            </span>
+                            <button @click="showPassword" class="absolute top-[12px] right-3 translate-y-6">
                                 <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="16" height="16" 
@@ -96,7 +111,7 @@
                                     <path d="M3.35 5.47q-.27.24-.518.487A13 13 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7 7 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12z"/>
                                 </svg>
                             </button>
-                        </div>
+                        </label>
                         <div class="my-4 flex justify-between items-center mx-2">
                             <div class="flex items-center">
                                 <input id="remember-me" type="checkbox"
