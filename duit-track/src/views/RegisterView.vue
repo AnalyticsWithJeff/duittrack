@@ -49,26 +49,58 @@
                         Please register your account and start the adventure
                     </p>
                     <p v-if="message" class="message">{{ message }}</p>
-                    <form @submit.prevent="register" class="flex flex-col gap-4">
-                        <input class="p-3 mt-8 border border-gray-400 rounded-lg" 
-                        type="text"
-                        name="name"
-                        v-model="name"
-                        placeholder="Name">
-                        <input class="p-3 mt-8 border border-gray-400 rounded-lg" 
-                        type="text"
-                        name="email"
-                        v-model="email"
-                        placeholder="Email">
-                        <input class="p-3 border border-gray-400 rounded-lg"
-                        type="password"
-                        name="password"
-                        v-model="password"
-                        placeholder="Password">
-                        <input class="p-3 border border-gray-400 rounded-lg"
-                        type="password"
-                        name="confirmpassword"
-                        placeholder="Confirm Password">
+                    <form @submit.prevent="register" class="flex flex-col">
+                        <label class="relative">
+                            <input class="p-3 mt-8 border border-gray-400 rounded-lg hover:border-gray-600 peer focus:ring-0 focus:outline-violet-600 
+                                focus:border-violet-600 w-full placeholder-transparent" 
+                            type="text"
+                            name="name"
+                            v-model="name"
+                            placeholder="Name">
+                            <span class="absolute left-3 top-5 px-1 bg-white text-sm peer-focus:translate-y-0 peer-focus:text-sm peer-focus:bg-white duration-150 
+                                peer-focus:text-indigo-600 peer-placeholder-shown:translate-y-6 peer-placeholder-shown:bg-none peer-placeholder-shown:text-base
+                                peer-placeholder-shown:text-gray-400 transition-all rounded">
+                                Name
+                            </span>
+                        </label>
+                        <label class="relative">
+                            <input class="p-3 mt-4 border border-gray-400 rounded-lg hover:border-gray-600 peer focus:ring-0 focus:outline-violet-600 
+                                focus:border-violet-600 w-full placeholder-transparent" 
+                            type="email"
+                            name="email"
+                            v-model="email"
+                            placeholder="Email">
+                            <span class="absolute left-3 top-1 px-1 bg-white text-sm peer-focus:translate-y-0 peer-focus:text-sm peer-focus:bg-white duration-150 
+                                peer-focus:text-indigo-600 peer-placeholder-shown:translate-y-6 peer-placeholder-shown:bg-none peer-placeholder-shown:text-base
+                                peer-placeholder-shown:text-gray-400 transition-all rounded">
+                                E-mail
+                            </span>
+                        </label>
+                        <label class="relative">
+                            <input class="p-3 mt-4 border border-gray-400 rounded-lg hover:border-gray-600 peer focus:ring-0 focus:outline-violet-600 
+                                focus:border-violet-600 w-full placeholder-transparent" 
+                            type="password"
+                            name="password"
+                            v-model="password"
+                            placeholder="Password">
+                            <span class="absolute left-3 top-1 px-1 bg-white text-sm peer-focus:translate-y-0 peer-focus:text-sm peer-focus:bg-white duration-150 
+                                peer-focus:text-indigo-600 peer-placeholder-shown:translate-y-6 peer-placeholder-shown:bg-none peer-placeholder-shown:text-base
+                                peer-placeholder-shown:text-gray-400 transition-all rounded">
+                                Password
+                            </span>
+                        </label>
+                        <label class="relative">
+                            <input class="p-3 mt-4 border border-gray-400 rounded-lg hover:border-gray-600 peer focus:ring-0 focus:outline-violet-600 
+                                focus:border-violet-600 w-full placeholder-transparent" 
+                            type="password"
+                            name="confirmpassword"
+                            placeholder="Confirm Password">
+                            <span class="absolute left-3 top-1 px-1 bg-white text-sm peer-focus:translate-y-0 peer-focus:text-sm peer-focus:bg-white duration-150 
+                                peer-focus:text-indigo-600 peer-placeholder-shown:translate-y-6 peer-placeholder-shown:bg-none peer-placeholder-shown:text-base
+                                peer-placeholder-shown:text-gray-400 transition-all rounded">
+                                Confirm Password
+                            </span>
+                        </label>
                         <div class="my-4 flex items-center mx-2">
                             <div class="flex items-center">
                                 <input id="remember-me" type="checkbox"
