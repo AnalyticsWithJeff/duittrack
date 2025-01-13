@@ -69,9 +69,9 @@
                                 name="email"
                                 placeholder="E-mail"
                                 v-model="email">
-                            <span class="absolute left-3 top-5 px-2 bg-white text-sm peer-focus:translate-y-0 peer-focus:text-sm peer-focus:bg-white duration-200 
+                            <span class="absolute left-3 top-5 px-1 bg-white text-sm peer-focus:translate-y-0 peer-focus:text-sm peer-focus:bg-white duration-150 
                                 peer-focus:text-indigo-600 peer-placeholder-shown:translate-y-6 peer-placeholder-shown:bg-none peer-placeholder-shown:text-base
-                                peer-placeholder-shown:text-gray-400 transition-all">
+                                peer-placeholder-shown:text-gray-400 transition-all rounded">
                                 E-mail
                             </span>
                         </label>
@@ -84,15 +84,15 @@
                                 name="password"
                                 v-model="password"
                                 placeholder="Password">
-                            <span class="absolute left-3 top-2 px-2 bg-white text-sm peer-focus:translate-y-0 peer-focus:text-sm peer-focus:bg-white duration-200 
+                            <span class="absolute left-3 top-2 px-1 bg-white rounded text-sm peer-focus:translate-y-0 peer-focus:text-sm peer-focus:bg-white duration-200 
                                 peer-focus:text-indigo-600 peer-placeholder-shown:translate-y-6 peer-placeholder-shown:bg-none peer-placeholder-shown:text-base
                                 peer-placeholder-shown:text-gray-400 transition-all">
                                 Password
                             </span>
-                            <button @click="showPassword" class="absolute top-[12px] right-3 translate-y-6">
+                            <button @click="showPassword" class="absolute top-3 right-3 translate-y-6">
                                 <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                width="16" height="16" 
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16"
                                 fill="gray"
                                 id="show-eye" 
                                 class="bi bi-eye hidden" viewBox="0 0 16 16">
